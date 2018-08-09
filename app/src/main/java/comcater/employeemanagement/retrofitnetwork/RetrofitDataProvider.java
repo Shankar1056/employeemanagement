@@ -119,8 +119,8 @@ public class RetrofitDataProvider extends AppCompatActivity implements ServiceMe
     }
 
     @Override
-    public void GetAssignTarget(String api_token, String emp_id, final DownlodableCallback<AssignWorkModel> callback) {
-        createRetrofitService().GetAssignTarget(api_token, emp_id).enqueue(
+    public void getAssignTarget(String api_token, String emp_id, final DownlodableCallback<AssignWorkModel> callback) {
+        createRetrofitService().getAssignTarget(api_token, emp_id).enqueue(
                 new Callback<AssignWorkModel>() {
                     @Override
                     public void onResponse(@NonNull Call<AssignWorkModel> call, @NonNull final Response<AssignWorkModel> response) {

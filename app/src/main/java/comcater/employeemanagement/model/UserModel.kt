@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName
 
 class UserModel (
 @SerializedName("status")
-val status: String?=null,
+val status: Boolean?=null,
 @SerializedName("message")
 val message: String?=null,
 @SerializedName("data")

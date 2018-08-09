@@ -28,7 +28,7 @@ public interface ApiRetrofitService {
     @Headers("x-api-key:"+ConstantValue.APIKEY)
     @POST(ConstantValue.GETASSIGNTARGET)
     @FormUrlEncoded
-    Call<AssignWorkModel> GetAssignTarget(@Header("api_token") String api_token, @Field("emp_id") String emp_id);
+    Call<AssignWorkModel> getAssignTarget(@Header("api_token") String api_token, @Field("emp_id") String emp_id);
 
 
 }

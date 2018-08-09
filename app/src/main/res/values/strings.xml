@@ -7,4 +7,14 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="hint_email">Email Id</string>
+    <string name="hint_password">Password</string>
+    <string name="enteremail">Enter your email id</string>
+    <string name="enterpassword">Enter your password</string>
+    <string name="hint_profile">My Profile</string>
+    <string name="hint_assignwork">Assign Work</string>
+    <string name="hint_taskid">Task Id:</string>
+    <string name="hint_assigndate">Assign Date:</string>
+    <string name="hint_assigntask">Assigned Task:</string>
+    <string name="hint_completiondate">Completion date:</string>
+    <string name="hint_TaskList">Task List</string>
 </resources>
