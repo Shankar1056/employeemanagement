@@ -20,15 +20,16 @@ class LoginActivity: AppCompatActivity() {
         setContentView(R.layout.activity_login)
         retrofitDataProvider = RetrofitDataProvider(this)
         if (ClsGeneral.getPreferences(this, ConstantValue.USERID).equals("")){
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        }
-        else {
+
             submitButton.setOnClickListener {
                 if (input_email.text.toString().trim().equals("")) Toast.makeText(this, resources.getString(R.string.enteremail), Toast.LENGTH_SHORT).show()
                 else if (input_password.text.toString().trim().equals("")) Toast.makeText(this, resources.getString(R.string.enterpassword), Toast.LENGTH_SHORT).show()
                 else doLogin()
             }
+        }
+        else {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
 
