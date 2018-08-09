@@ -9,6 +9,8 @@ import android.util.Log;
 import java.util.concurrent.TimeUnit;
 
 import comcater.employeemanagement.common.ConstantValue;
+import comcater.employeemanagement.model.AssignWorkModel;
+import comcater.employeemanagement.model.EmployeeLatLonModel;
 import comcater.employeemanagement.model.UserModel;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -49,8 +51,8 @@ public class RetrofitDataProvider extends AppCompatActivity implements ServiceMe
     }
 
     @Override
-    public void login(String email, String password, final DownlodableCallback<UserModel> callback) {
-        createRetrofitService().login(email, password).enqueue(
+    public void login(String email, String password, String device_token, final DownlodableCallback<UserModel> callback) {
+        createRetrofitService().login(email, password, device_token).enqueue(
                 new Callback<UserModel>() {
                     @Override
                     public void onResponse(@NonNull Call<UserModel> call, @NonNull final Response<UserModel> response) {
@@ -82,6 +84,73 @@ public class RetrofitDataProvider extends AppCompatActivity implements ServiceMe
         );
     }
 
+    @Override
+    public void saveEmpLatLon(String api_token, String emp_id, String lat, String lon, String address, final DownlodableCallback<EmployeeLatLonModel> callback) {
+        createRetrofitService().saveEmpLatLon(api_token, emp_id, lat, lon, address).enqueue(
+                new Callback<EmployeeLatLonModel>() {
+                    @Override
+                    public void onResponse(@NonNull Call<EmployeeLatLonModel> call, @NonNull final Response<EmployeeLatLonModel> response) {
+                        if (response.code()==200) {
+
+                            EmployeeLatLonModel mobileRegisterPojo = response.body();
+                            callback.onSuccess(mobileRegisterPojo);
+
+                        } else
+
+                        {
+                            if (response.code() == 401)
+                            {
+                                callback.onUnauthorized(response.code());
+                            }
+                            else {
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(@NonNull Call<EmployeeLatLonModel> call, @NonNull Throwable t) {
+                        Log.d("Result", "t" + t.getMessage());
+                        callback.onFailure(t.getMessage());
+
+                    }
+                }
+        );
+    }
+
+    @Override
+    public void GetAssignTarget(String api_token, String emp_id, final DownlodableCallback<AssignWorkModel> callback) {
+        createRetrofitService().GetAssignTarget(api_token, emp_id).enqueue(
+                new Callback<AssignWorkModel>() {
+                    @Override
+                    public void onResponse(@NonNull Call<AssignWorkModel> call, @NonNull final Response<AssignWorkModel> response) {
+                        if (response.code()==200) {
+
+                            AssignWorkModel mobileRegisterPojo = response.body();
+                            callback.onSuccess(mobileRegisterPojo);
+
+                        } else
+
+                        {
+                            if (response.code() == 401)
+                            {
+                                callback.onUnauthorized(response.code());
+                            }
+                            else {
+
+                            }
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(@NonNull Call<AssignWorkModel> call, @NonNull Throwable t) {
+                        Log.d("Result", "t" + t.getMessage());
+                        callback.onFailure(t.getMessage());
+
+                    }
+                }
+        );
+    }
 
 
 }
