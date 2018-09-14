@@ -39,8 +39,8 @@ class AssignTaskAdapter(private val context: Context, private val myCartModels: 
 
         holder.taskIdTV.text = sa.id
         holder.dateValueTV.text = sa.assign_date
-        holder.assignTaskTV.text = sa.target_value
-        holder.completionDateTV.text = sa.target_period
+        holder.assignTaskTV.text = "₹ "+sa.target_value
+        holder.completionDateTV.text = sa.target_period+" days"
     }
 
     override fun getItemCount(): Int {

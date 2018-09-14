@@ -13,5 +13,12 @@ public class ConstantValue {
 
     public static final String USERID = "user_id";
     public static final String MOBILE = "mobile";
+    public static final String NAME = "name";
+    public static final String EMAIL = "email";
+    public static final String ADDRESS = "address";
+    public static final String CITY = "city";
+    public static final String STATE = "state";
     public static final String APITOKEN = "api_token";
+    public static final String JOININGATE = "joining_date";
+    public static final String STATUS = "status";
 }

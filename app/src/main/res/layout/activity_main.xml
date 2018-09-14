@@ -28,6 +28,7 @@
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/topbar">
         <LinearLayout
+            android:id="@+id/profileLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"

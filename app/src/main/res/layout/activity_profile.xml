@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorAccent"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+<android.support.v7.widget.CardView
+    android:id="@+id/basiInfo"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardElevation="3dp"
+    card_view:cardCornerRadius="4dp"
+    card_view:cardUseCompatPadding="true"
+    card_view:layout_constraintTop_toBottomOf="@+id/topbar">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/basicTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent"
+            android:text="@string/basic_info"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_nova_semi_bold"/>
+
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/basicTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/name"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/nameTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/nameTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="jfn jf efoEFN"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+        <TextView
+            android:id="@+id/emailTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/nameTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/email"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/emailTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/emailTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="mgsg@gail.com"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+        <TextView
+            android:id="@+id/moileTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/emailTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/moile"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/mobieTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/moileTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="2589631478"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+        <TextView
+            android:id="@+id/addressTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/mobieTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/address"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/addressTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/addressTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="f irglr oiej oi jgorhgorihgogo g"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+        <TextView
+            android:id="@+id/cityTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/addressTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/city"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/cityTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/cityTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="Koderma"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+        <TextView
+            android:id="@+id/stateTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/cityTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/state"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/stateTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/stateTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="Jharkhand"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/joiningTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/stateTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/joiningdate"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/joinTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/joiningTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="2018-02-21"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/statusTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/joinTVvalue"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="@string/status"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+        <TextView
+            android:id="@+id/statusTVvalue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:layout_constraintTop_toBottomOf="@+id/statusTV"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            android:text="Activie"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/proxima_nova_regular"/>
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>
+    
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardElevation="3dp"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardUseCompatPadding="true"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/basiInfo">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

@@ -1,16 +1,20 @@
 package comcater.employeemanagement.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-class UserModel (
+@Parcelize
+class UserModel(
 @SerializedName("status")
 val status: Boolean?=null,
 @SerializedName("message")
 val message: String?=null,
 @SerializedName("data")
 val data: ArrayList<UserDataModel>?=null
-)
+) : Parcelable
 
+@Parcelize
 class UserDataModel (
         @SerializedName("id")
         val id: String?=null,
@@ -45,4 +49,4 @@ class UserDataModel (
         @SerializedName("status")
         val status: String?=null
 
-)
+) : Parcelable

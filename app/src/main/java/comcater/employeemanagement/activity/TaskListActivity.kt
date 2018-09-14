@@ -21,6 +21,11 @@ class TaskListActivity: AppCompatActivity() {
         retrofitDataProvider = RetrofitDataProvider(this)
         taskListRV.layoutManager = LinearLayoutManager(this)
 
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener {
+            finish()
+        }
         taskListApi()
     }
 

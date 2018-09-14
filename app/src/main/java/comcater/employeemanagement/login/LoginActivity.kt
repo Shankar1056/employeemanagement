@@ -40,6 +40,14 @@ class LoginActivity: AppCompatActivity() {
                     if (result.data!![0].status.equals("1")){
                         ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.USERID, result.data[0].id)
                         ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.APITOKEN, result.data[0].api_token)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.NAME, result.data[0].name)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.EMAIL, result.data[0].email)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.MOBILE, result.data[0].mobile)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.ADDRESS, result.data[0].address)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.CITY, result.data[0].city)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.STATE, result.data[0].state)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.JOININGATE, result.data[0].joining_date)
+                        ClsGeneral.setPreferences(this@LoginActivity, ConstantValue.STATUS, result.data[0].status)
                         startActivity(Intent(this@LoginActivity, MainActivity::class.java))
                         finish()
                     }

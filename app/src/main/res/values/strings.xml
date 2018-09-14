@@ -17,4 +17,16 @@
     <string name="hint_assigntask">Assigned Task:</string>
     <string name="hint_completiondate">Completion date:</string>
     <string name="hint_TaskList">Task List</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="tasklist">All task list</string>
+    <string name="profile">My Profile</string>
+    <string name="basic_info">Basic Info</string>
+    <string name="name">Name</string>
+    <string name="email">Email Id</string>
+    <string name="moile">Contact Number</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="joiningdate">Joining Date</string>
+    <string name="status">Status</string>
 </resources>
