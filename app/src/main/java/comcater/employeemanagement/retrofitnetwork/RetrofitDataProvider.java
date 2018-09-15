@@ -85,8 +85,8 @@ public class RetrofitDataProvider extends AppCompatActivity implements ServiceMe
     }
 
     @Override
-    public void saveEmpLatLon(String api_token, String emp_id, String lat, String lon, String address, final DownlodableCallback<EmployeeLatLonModel> callback) {
-        createRetrofitService().saveEmpLatLon(api_token, emp_id, lat, lon, address).enqueue(
+    public void saveEmpLatLon(String api_token, String emp_id, String lat, String lon, String time,String name, final DownlodableCallback<EmployeeLatLonModel> callback) {
+        createRetrofitService().saveEmpLatLon(api_token, emp_id, lat, lon, time, name).enqueue(
                 new Callback<EmployeeLatLonModel>() {
                     @Override
                     public void onResponse(@NonNull Call<EmployeeLatLonModel> call, @NonNull final Response<EmployeeLatLonModel> response) {

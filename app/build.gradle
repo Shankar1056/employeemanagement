@@ -9,8 +9,8 @@ android {
         applicationId "comcater.employeemanagement"
         minSdkVersion 17
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -31,7 +31,7 @@ androidExtensions {
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-beta01'
     implementation 'com.android.support:design:28.0.0-beta01'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
@@ -39,7 +39,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
     // retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
@@ -49,7 +48,9 @@ dependencies {
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.android.support:cardview-v7:28.0.0-alpha3'
     implementation 'com.android.support:recyclerview-v7:28.0.0-alpha3'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
 }
+apply plugin: 'com.google.gms.google-services'
 repositories {
     mavenCentral()
 }

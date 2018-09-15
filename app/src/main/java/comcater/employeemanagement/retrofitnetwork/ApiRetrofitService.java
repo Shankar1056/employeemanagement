@@ -21,14 +21,16 @@ public interface ApiRetrofitService {
     Call<UserModel> login(@Field("email") String email, @Field("password") String password, @Field("device_token") String device_token);
 
     @Headers("x-api-key:"+ConstantValue.APIKEY)
-    @POST(ConstantValue.LOGIN)
+    @POST(ConstantValue.SAVEEMPLOYEELATLON)
     @FormUrlEncoded
-    Call<EmployeeLatLonModel> saveEmpLatLon(@Header("api_token") String api_token, @Field("emp_id") String emp_id, @Field("lat") String lat, @Field("lon") String lon, @Field("address") String address);
+    Call<EmployeeLatLonModel> saveEmpLatLon(@Header("api_token") String api_token, @Field("emp_id") String emp_id, @Field("lat") String lat, @Field("lon") String lon, @Field("time") String address, @Field("name") String name);
 
     @Headers("x-api-key:"+ConstantValue.APIKEY)
     @POST(ConstantValue.GETASSIGNTARGET)
     @FormUrlEncoded
     Call<AssignWorkModel> getAssignTarget(@Header("api_token") String api_token, @Field("emp_id") String emp_id);
+
+
 
 
 }
